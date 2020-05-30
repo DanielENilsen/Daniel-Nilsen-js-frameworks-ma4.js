@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 
 
 export default function RecipeList () { 
-    const [characters, recipes] = useState([]);
+    const [ApiIndex, recipes] = useState([]);
 
 
     useEffect(() =>  {  
@@ -14,7 +14,7 @@ export default function RecipeList () {
     }, []);
     return (
         <div>
-          {characters.map(character => (
+          {ApiIndex.map(character => (
                 <article className = 'card'key={character.id}>
                     <h3>{character.title}</h3>
                     <p>{character.ingredients}</p>
